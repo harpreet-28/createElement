@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QUESTION 7</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <button id="button">BUTTON</button>
+        <script type="text/javascript">
+        var _id = function _id(id) {
+            return document['getElementById'](id);
+        }
+        var wrap = _id('wrap');
+        var btn = _id('button');
+
+
+        btn['addEventListener']('click', function() {
+            //creating a div tag and adding text to it.
+            var createDiv = document.createElement("div");
+            var div = document.createTextNode("I just created a div!!");
+            createDiv.appendChild(div);
+            var div1 = document.getElementById("div1");
+            document.body.insertBefore(createDiv, div1);
+
+            //creating input box and setting its attribute
+            //first input box
+            var input1 = document['createElement']('input');
+            var inp = input1.setAttribute('type', 'text');
+            input1.setAttribute('placeholder', 'This is input box One');
+            input1.setAttribute('name', 'inputBox');
+            document.body.insertBefore(input1, inp);
+
+            //second input box
+            var input2 = document['createElement']('input');
+            var inp = input2.setAttribute('type', 'text');
+            input2.setAttribute('placeholder', 'This is input box Two');
+            input2.setAttribute('name', 'inputBox');
+            document.body.insertBefore(input2, inp);
+
+            //creating an image tag and adding an image
+            var img = document.createElement("IMG");
+            document.body.insertBefore(img, input2);
+            img.src = "https://s-media-cache-ak0.pinimg.com/564x/7a/8a/b3/7a8ab34ded8b825848163d312af37216.jpg";
+        }, false);
+        </script>
+    </div>
+</body>
+
+</html>
